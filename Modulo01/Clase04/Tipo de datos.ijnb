@@ -1,0 +1,381 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "language_info": {
+      "name": "java"
+    }
+  },
+  "cells": [
+    {
+      "id": "09778bfd-e102-45be-969d-d961f3e35b07",
+      "cell_type": "markdown",
+      "source": "### Java Notebook: Programación interactiva con Java\r\n\r\n#### ¿Qué es?\r\n\r\nUn Java Notebook es un entorno interactivo que permite escribir, ejecutar y documentar código Java en bloques llamados celdas. Su funcionamiento es similar a los notebooks utilizados en Python, como los de Jupyter, pero enfocados en el lenguaje Java.\r\n\r\nLa idea principal es combinar:\r\n\r\n* Código ejecutable\r\n* Explicaciones en texto\r\n* Resultados inmediatos\r\n* Gráficas o salidas visuales\r\n\r\nTodo en un mismo documento.\r\n\r\nEsto hace que los notebooks sean muy útiles para:\r\n\r\n* Aprender programación\r\n* Enseñar conceptos\r\n* Realizar pruebas rápidas\r\n* Documentar experimentos\r\n* Explicar algoritmos paso a paso\r\n\r\n\r\n**Ejemplo**\r\n\r\n",
+      "metadata": {
+        "language": "markdown",
+        "id": "09778bfd-e102-45be-969d-d961f3e35b07"
+      }
+    },
+    {
+      "id": "2237e672-3fa7-4410-a8b6-258fb7567fe0",
+      "cell_type": "code",
+      "source": "System.out.println(\"Hola Mundo\");",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "28ac2aa6-7947-460d-bfb1-fdafc4b36434",
+      "cell_type": "markdown",
+      "source": "### Tipos de datos.\r\n\r\nEn programación, los tipos de datos permiten definir qué clase de información puede almacenarse en una variable.\r\n\r\nPor ejemplo:\r\n\r\n* Números enteros\r\n* Números decimales\r\n* Caracteres\r\n* Texto\r\n* Valores verdaderos o falsos\r\n\r\nJava es un lenguaje fuertemente tipado, lo que significa que cada variable debe tener un tipo definido antes de ser utilizada.\r\n\r\n\r\n**¿Qué es una variable?**\r\n\r\nUna variable es un espacio en memoria que almacena información.\r\n\r\n$$\r\n\\begin{array}{|c|c|c|c|}\r\n\\hline\r\n\\textbf{Tipo} & \\textbf{Tamaño} & \\textbf{Descripción} & \\textbf{Ejemplo} \\\\\r\n\\hline\r\n\r\n\\text{byte} & 8\\ \\text{bits} & \\text{Enteros pequeños} & \\texttt{byte edad = 25;} \\\\\r\n\\hline\r\n\r\n\\text{short} & 16\\ \\text{bits} & \\text{Enteros medianos} & \\texttt{short poblacion = 32000;} \\\\\r\n\\hline\r\n\r\n\\text{int} & 32\\ \\text{bits} & \\text{Enteros comunes} & \\texttt{int salario = 2500000;} \\\\\r\n\\hline\r\n\r\n\\text{long} & 64\\ \\text{bits} & \\text{Enteros grandes} & \\texttt{long distancia = 9876543210L;} \\\\\r\n\\hline\r\n\r\n\\text{float} & 32\\ \\text{bits} & \\text{Decimales simples} & \\texttt{float temperatura = 36.5f;} \\\\\r\n\\hline\r\n\r\n\\text{double} & 64\\ \\text{bits} & \\text{Decimales precisos} & \\texttt{double pi = 3.14159;} \\\\\r\n\\hline\r\n\r\n\\text{char} & 16\\ \\text{bits} & \\text{Un caracter} & \\texttt{char letra = 'A';} \\\\\r\n\\hline\r\n\r\n\\text{boolean} & 1\\ \\text{bit} & \\text{Valores logicos} & \\texttt{boolean activo = true;} \\\\\r\n\\hline\r\n\r\n\\text{String} & \\text{Variable} & \\text{Texto} & \\texttt{String nombre = \"Carlos\";} \\\\\r\n\\hline\r\n\r\n\\end{array}\r\n$$\r\n\r\n",
+      "metadata": {
+        "language": "markdown",
+        "id": "28ac2aa6-7947-460d-bfb1-fdafc4b36434"
+      }
+    },
+    {
+      "id": "2a39b220-34d6-41e8-8ff6-f11aabc31309",
+      "cell_type": "code",
+      "source": "tipoDato nombreVariable = valor;",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "844ae984-b049-46ee-879a-1fd3a5602c1d",
+      "cell_type": "markdown",
+      "source": "**Ejemplo**",
+      "metadata": {
+        "language": "markdown",
+        "id": "844ae984-b049-46ee-879a-1fd3a5602c1d"
+      }
+    },
+    {
+      "id": "6934d12d-c838-4b05-8529-9b11a1037d70",
+      "cell_type": "code",
+      "source": "byte miByte = 127; // Rango: -128 a 127\r\nshort miShort = 32767; // Rango: -32,768 a 32,767\r\nint miInt = 2147483647; // Rango: -2,147,483,648 a 2,147,483,647\r\nlong miLong = 9223372036854775807L; // Rango: -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807\r\nfloat miFloat = 3.14f; // Precisión de 7 dígitos\r\ndouble miDouble = 3.141592653589793; // Precisión de 15 dígitos\r\nchar miChar = 'A'; // Caracter único un error común es colocar el tipo de dato char entre comillas dobles, lo correcto es entre comillas simples\r\nboolean miBoolean = true; // Verdadero o falso\r\nString miString = \"Hola, mundo!\"; // Cadena de texto",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "e80d562c-4ce8-44db-af3a-45de03529497",
+      "cell_type": "markdown",
+      "source": "**Ejercicio**\r\n\r\n1. Crear variables que almacene:\r\n\r\n* Nombre\r\n* Edad\r\n* Altura\r\n\r\n2. Imprimir un mensaje con estaas variables utilizando el comando System.out.println(), por ejemplo:\r\n   Mi nombre es Pepito Perez, tengo 30 años y mido 175 cm.\r\n\r\n",
+      "metadata": {
+        "language": "markdown",
+        "id": "e80d562c-4ce8-44db-af3a-45de03529497"
+      }
+    },
+    {
+      "id": "01b92556-ec72-43a2-9d39-211b5f86d4ab",
+      "cell_type": "code",
+      "source": "//Escriba aquí su código.",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "bf13cb01-3739-4b31-a558-984e1f2fb7a2",
+      "cell_type": "markdown",
+      "source": "### Conversión de datos Manual (Casting)\r\n\r\nCuando se convierte un tipo grande a uno pequeño.\r\n **Ejemplo**",
+      "metadata": {
+        "language": "markdown",
+        "id": "bf13cb01-3739-4b31-a558-984e1f2fb7a2"
+      }
+    },
+    {
+      "id": "b9a0b849-9a66-45db-87a4-a1a1ce45c610",
+      "cell_type": "code",
+      "source": "double numero = 9.8;\r\n\r\nint parteEntera = (int) numero; // Conversión explícita (casting)\r\nSystem.out.println(\"La parte entera de \" + numero + \" es: \" + parteEntera);",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "ba7d17f0-6d3d-4599-8637-6364e654268a",
+      "cell_type": "markdown",
+      "source": "**Ejercicio**\r\n\r\n1. Declara un char con el valor 'a'\r\n2. Imprime el valor de a\r\n3. Intenta convertirlo a int\r\n4. Imprimer el valor convertido\r\n",
+      "metadata": {
+        "language": "markdown",
+        "id": "ba7d17f0-6d3d-4599-8637-6364e654268a"
+      }
+    },
+    {
+      "id": "4841fc2b-ed4c-453e-98e8-85142f1ebb15",
+      "cell_type": "code",
+      "source": "//Escribe aquí tu código.",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "24b92c46-caf6-4368-a41b-16ce4cf06d1b",
+      "cell_type": "markdown",
+      "source": "### Operadores en Java\r\n\r\nLos operadores en Java permiten realizar operaciones sobre variables y valores. \r\n\r\n* Sumar números\r\n* Comparar valores\r\n* Tomar decisiones\r\n* Manipular variables\r\n* Combinar condiciones\r\n\r\nLos operadores trabajan directamente con los diferentes tipos de datos vistos anteriormente\r\n\r\n#### ¿Qué es un operador?\r\nUn operador es un símbolo que realiza una operación específica\r\n\r\nTipo \r\n* Aritméticos. +,-,*,/\r\n* Relacionales >,<, ==\r\n* Lógicos. ==, ||, &&\r\n* Asignación. =, +=, -=\r\n* Incremento y decremento. ++, --\r\n* Concatenación. + con String.",
+      "metadata": {
+        "language": "markdown",
+        "id": "24b92c46-caf6-4368-a41b-16ce4cf06d1b"
+      }
+    },
+    {
+      "id": "7c1beb71-9255-41a4-aba9-004ed9b23f23",
+      "cell_type": "code",
+      "source": "int a = 10;\r\nint b = 20;\r\nint suma = a + b;\r\nSystem.out.println(\"La suma de \" + a + \" y \" + b + \" es: \" + suma);",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 14,
+          "success": true
+        }
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "La suma de 10 y 20 es: 30\r\n"
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "id": "2f8f670b-2a3b-41d7-aa20-58a5c2749101",
+      "cell_type": "code",
+      "source": "//Módulo, el operador % devuelve el resto de la división entre dos números.\r\nint dividendo = 10;\r\nint divisor = 3;\r\nint resto = dividendo % divisor;\r\nSystem.out.println(\"El resto de dividir \" + dividendo + \" entre \" + divisor + \" es: \" + resto);",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 15,
+          "success": true
+        }
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "El resto de dividir 10 entre 3 es: 1\r\n"
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "id": "f60a7a08-fe2b-445f-8b55-60d8eb7ba5ff",
+      "cell_type": "code",
+      "source": "//Operadores relacionales, devuelven un valor booleano (true o false) dependiendo de la comparación entre dos valores.\r\n\r\nint a = 10;\r\nint b = 10;\r\nSystem.out.println(\"¿a es igual a b? \" + (a == b)); // true\r\nSystem.out.println(\"¿a es diferente de b? \" + (a != b)); // false\r\nSystem.out.println(\"¿a es mayor que b? \" + (a > b)); // false\r\nSystem.out.println(\"¿a es menor que b? \" + (a < b)); // false\r\nSystem.out.println(\"¿a es mayor o igual que b? \" + (a >= b)); // true\r\nSystem.out.println(\"¿a es menor o igual que b? \" + (a <= b)); // true",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 16,
+          "success": true
+        }
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "¿a es igual a b? true\r\n¿a es diferente de b? false\r\n¿a es mayor que b? false\r\n¿a es menor que b? false\r\n¿a es mayor o igual que b? true\r\n¿a es menor o igual que b? true\r\n"
+          },
+          "metadata": {},
+          "execution_count": 16
+        }
+      ]
+    },
+    {
+      "id": "88546327-5d5e-4407-aac2-510a7232aff1",
+      "cell_type": "code",
+      "source": "//Operadores lógicos, se utilizan para combinar expresiones booleanas y devuelven un valor booleano.\r\nboolean x = true;\r\nboolean y = false;\r\nSystem.out.println(\"x AND y: \" + (x && y)); // false\r\nSystem.out.println(\"x OR y: \" + (x || y)); // true  \r\nSystem.out.println(\"NOT x: \" + (!x)); // false  ",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 18,
+          "success": true
+        }
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "x AND y: false\r\nx OR y: true\r\nNOT x: false\r\n"
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ]
+    },
+    {
+      "id": "5b5b2c74-5a3e-43b5-ad69-018227477ec1",
+      "cell_type": "code",
+      "source": "//Operadores de asignación, se utilizan para asignar valores a las variables.\r\nint a = 10;\r\na += 5; // Equivalente a a = a + 5\r\nSystem.out.println(\"El valor de a después de a += 5 es: \" + a); // 15\r\na -= 3; // Equivalente a a = a - 3\r\nSystem.out.println(\"El valor de a después de a -= 3 es: \" + a); // 12\r\na *= 2; // Equivalente a a = a * 2\r\nSystem.out.println(\"El valor de a después de a *= 2 es: \" + a\r\n); // 24\r\na /= 4; // Equivalente a a = a / 4\r\nSystem.out.println(\"El valor de a después de a /= 4 es: \" + a); // 6",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 19,
+          "success": true
+        }
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "El valor de a después de a += 5 es: 15\r\nEl valor de a después de a -= 3 es: 12\r\nEl valor de a después de a *= 2 es: 24\r\nEl valor de a después de a /= 4 es: 6\r\n"
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "id": "7cc28c51-566e-47e8-a13c-5b2f1bf31ef4",
+      "cell_type": "code",
+      "source": "//Incremento y decremento, se utilizan para aumentar o disminuir el valor de una variable en 1.\r\nint a = 10;\r\na++; // Incremento, equivalente a a = a + 1\r\nSystem.out.println(\"El valor de a después de a++ es: \" + a); // 11\r\na--; // Decremento, equivalente a a = a - 1\r\nSystem.out.println(\"El valor de a después de a-- es: \" + a); //\r\n",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 20,
+          "success": true
+        }
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "El valor de a después de a++ es: 11\r\nEl valor de a después de a-- es: 10\r\n"
+          },
+          "metadata": {},
+          "execution_count": 20
+        }
+      ]
+    },
+    {
+      "id": "e86cc225-427c-4b76-8c99-2e19dbeac6ea",
+      "cell_type": "code",
+      "source": "//Concatenación de cadenas, se utiliza para unir dos o más cadenas de texto.\r\nString saludo = \"¡Hola\";\r\nString nombre = \"Mundo\";\r\nString mensaje = saludo + \", \" + nombre + \"!\";\r\nSystem.out.println(mensaje); // \"¡Hola, Mundo!\"",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 23,
+          "success": true
+        }
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "¡Hola, Mundo!\r\n"
+          },
+          "metadata": {},
+          "execution_count": 23
+        }
+      ]
+    },
+    {
+      "id": "3cafca54-d500-4d28-ba8a-232005b97bab",
+      "cell_type": "code",
+      "source": "//Uso de paréntesis para controlar el orden de las operaciones.\r\nint resultado = (2 + 3) * 4; // Sin paréntesis, el resultado sería 14, con paréntesis es 20\r\nSystem.out.println(\"El resultado de (2 + 3) * 4 es: \" + resultado);",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 24,
+          "success": true
+        }
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "El resultado de (2 + 3) * 4 es: 20\r\n"
+          },
+          "metadata": {},
+          "execution_count": 24
+        }
+      ]
+    },
+    {
+      "id": "5478d2f5-4130-438d-9d2a-1a543267ba37",
+      "cell_type": "code",
+      "source": "/* Operadores ternarios, se utilizan para asignar un valor a una variable dependiendo de una condición.\r\n  Su estructura es: condición ? valor_si_verdadero : valor_si_falso */\r\nint a = 10;\r\nString resultado = (a < 2) ? \"El número es menor que 2\" : \"El número es mayor o igual a 2\";  \r\nSystem.out.println(\"El número \" + a + \" es: \" + resultado); // \"El número 10 es: El número es mayor o igual a 2\"",
+      "metadata": {
+        "language": "java",
+        "executionSummary": {
+          "executionOrder": 27,
+          "success": true
+        }
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "El número 10 es: El número es mayor o igual a 2\r\n"
+          },
+          "metadata": {},
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "id": "18fa106c-b6a9-4ec8-b287-9086d565f4b1",
+      "cell_type": "code",
+      "source": "//Ejercicio 1: Escribe un programa que declare dos variables enteras, las sume y muestre el resultado.",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "f9684ee3-47f0-4054-9d27-a46c18d32073",
+      "cell_type": "code",
+      "source": "//Ejercicio 2: Escribe un programa que determine si un número es par o impar utilizando el operador módulo (%).\r\n",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "610e72f3-c6d0-41d1-bf09-39427062e721",
+      "cell_type": "code",
+      "source": "//Ejercicio 3: Escribe un programa que utilice operadores relacionales para comparar dos números y mostrar cuál es mayor, menor o si son iguales.",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "id": "b8b11a36-983c-475c-9186-22ae9c992c4b",
+      "cell_type": "code",
+      "source": "//Ejercicio 4: Escribe un programa que utilice operadores lógicos para evaluar si un número es positivo y par al mismo tiempo.\r\n",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
